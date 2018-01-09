@@ -20,3 +20,6 @@ One file for the minimum words, and one for the minimum books.
 For each of these, there is one list output that sorts by frequency (descending), and one that sorts alphabetically.
 
 Included in the repo is the results of a 1m word and 300k book frequency list for the years from 1980-current.
+
+# Note
+I'm using C# 7.0, so VS2017 is handy.
