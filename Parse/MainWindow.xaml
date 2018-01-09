@@ -1,0 +1,43 @@
+﻿<Window x:Class="Parse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525" x:Name="_thisWindow">
+   <Grid DataContext="{Binding ElementName=_thisWindow}">
+      <StackPanel>
+         <TextBlock Width="100" Text="Scan" HorizontalAlignment="Left" FontWeight="Bold"/>
+         <Button Content="Scan" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Click="OnParseClick" />
+         <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Data Path" Width="100" />
+            <TextBox Text="{Binding DataPath}" Width="200"/>
+         </StackPanel>
+         <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Min Year" Width="100" />
+            <TextBox Text="{Binding MinYear}" Width="200"/>
+         </StackPanel>
+         <StackPanel Orientation="Horizontal">
+            <TextBlock Text="Max Year" Width="100" />
+            <TextBox Text="{Binding MaxYear}" Width="200"/>
+         </StackPanel>
+         <TextBlock Text="{Binding CurrentFile}"/>
+         <TextBlock Text="{Binding StatusText}"/>
+         
+         <StackPanel IsEnabled ="{Binding CanWriteOutput}">
+            <TextBlock Width="100" Text="Output" Margin="0 8 0 0 " HorizontalAlignment="Left" FontWeight="Bold"/>
+            <StackPanel Orientation="Horizontal">
+               <TextBlock Width="100" Text="Minimum Words" />
+               <TextBox Text="{Binding MinWords}" Width="200" />
+            </StackPanel>
+
+            <StackPanel Orientation="Horizontal">
+               <TextBlock Width="100" Text="Minimum Books" />
+               <TextBox Text="{Binding MinBooks}" Width="200" />
+            </StackPanel>
+            <Button Content="Write Output" IsEnabled="{Binding CanWriteOutput}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="100" Click="OnOutputClick" />
+
+         </StackPanel>
+      </StackPanel>
+   </Grid>
+</Window>
