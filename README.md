@@ -5,6 +5,7 @@ Parses google English word n-grams to create a word frequency list with a much s
 Go to the google n-grams repository, and download the American English 2012 1-grams for letters a-z.
 googlebooks-eng-us-all-1gram-20120701-[a-z]
 Note the us in the file name. Also note the 2012.
+http://storage.googleapis.com/books/ngrams/books/datasetsv2.html
 
 Download the files, and unzip them all into a directory. The files will take about 20GB in total.
 Next, run the program and enter the min and max year you wish to scrape for word frequency.
